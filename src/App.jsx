@@ -12,13 +12,52 @@ import Vector3 from "./assets/vector3.svg"
 import Vector4 from "./assets/vector4.svg"
 import Vector5 from "./assets/vector5.svg"
 import Vector6 from "./assets/vector6.svg"
-import Vector7 from "./assets/vector7.svg"
-import MePhoto from "./assets/black_and_white.jpg"
 import Vector8 from "./assets/vector8.svg"
+import Vector9 from "./assets/vector9.svg"
+import Vector10 from "./assets/vector10.svg"
+import Vector11 from "./assets/vector11.svg"
+import Vector12 from "./assets/vector12.svg"
+import Vector13 from "./assets/vector13.svg"
+import Vector14 from "./assets/vector14.svg"
 
 import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 
+import { useRef, useState } from "react"
+import Accordion from "./components/Accordion"
+
 function App() {
+  const subscriptionPlansRef = useRef(null)
+  const [faqList, setFaqList] = useState([
+    {
+      q: "Why shouldn't I hire a full-time designer instead?",
+      a: "Great question! Well, the annual cost hiring a full-time designer exceeds $100,000/year, plus other benefits. Even if you take the plunge and hire one, you may not have enough work to keep them busy at all times. \n However, with the monthly plan, you can pause and resume your subscription whenever you need to ensure you're only paying when you need some design work done.",
+    },
+    {
+      q: "How does the pause feature work in the monthly subscription?",
+      a: "We understand that you may not have enough design work for the entire month, that's why our billing cycles work on a 30-day basis. So if your work is done and you decide to pause the subscription on the 20th of the month, you will still have 10 days left to request more work whenever you need it in the future.",
+    },
+    {
+      q: "What softwares do you use for design?",
+      a: "All design work is done in Figma.",
+    },
+    {
+      q: "What if I want changes in a design?",
+      a: "No problem! We offer unlimited revisions on the design so that you have exactly what you need at the end.",
+    },
+    {
+      q: "How fast will my designs be delivered?",
+      a: "The typical turn around time for each request is about 2 days or less, however more complex designs may take more time.",
+    },
+    {
+      q: "Are there any refunds if I don't like the service?",
+      a: "Since the nature of the work is high quality, there will be no refunds issued.",
+    },
+  ])
+
+  function handleScrollClick() {
+    subscriptionPlansRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <ParallaxProvider>
       <div className="box-border bg-primary w-full h-full overflow-x-hidden ">
@@ -29,15 +68,14 @@ function App() {
             Web Design For Influence.
           </div>
           <div className="mt-7 text-xl md:text-2xl text-center">
-            Web design and development for your business.
+            Web design and development subscription for your business.
           </div>
-          <a
-            href="https://cal.com/yash-accsuite/20min"
-            target="_blank"
+          <div
+            onClick={handleScrollClick}
             className="mt-11 text-xl md:text-2xl text-white bg-black px-11 md:px-16 py-3 md:py-4 shadow-sm md:shadow-lg  cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
           >
-            Book a free call
-          </a>
+            See plans
+          </div>
           <div className="mt-11 text-md font-thin text-center">
             Designs that'll get you customers, guaranteed.
           </div>
@@ -102,7 +140,8 @@ function App() {
               <Code />
               <div className="text-xl text-center">
                 We'll revise your designs until <br />
-                you're satisfied. Then we'll <br /> develop it for you
+                you're satisfied. Optionally, we'll <br /> also develop it for
+                you
               </div>
             </div>
           </div>
@@ -122,30 +161,29 @@ function App() {
         <div className="mt-20"></div>
         <div className="z-20 flex flex-wrap gap-11 w-full justify-center items-center p-2 md:p-0">
           {/* section 3 */}
-          <div className="z-20 border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl">
+          <div className="z-20 border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:rotate-3 transition-all">
             Design that is uniquely tailored to your brand, delivered lightning
             fast.
           </div>
-          <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl">
-            Website analytics to optimize your website for conversions.
+          <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:-rotate-3 transition-all">
+            Custom code and no-code development for your website.
           </div>
-          <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl">
-            Persuasive copy to go along with your brand and attract more
-            customers.
+          <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:rotate-3 transition-all">
+            Analytics to optimize your website for conversions.
           </div>
-          <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl">
+          <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:-rotate-3 transition-all">
             Optimize your sales funnel so that visitors find your offer
             irresistable.
           </div>
         </div>
+
         <div className="relative z-20 mt-20 flex justify-center items-center">
-          <a
-            href="https://cal.com/yash-accsuite/20min"
-            target="_blank"
+          <div
+            onClick={handleScrollClick}
             className=" z-20 text-xl md:text-2xl text-white bg-black px-11 md:px-16 py-3 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
           >
-            Book a free call
-          </a>
+            See plans
+          </div>
           <img
             src={Vector6}
             alt=""
@@ -154,50 +192,211 @@ function App() {
         </div>
         <div className="mt-32 flex justify-center items-center">
           {/* section 4 */}
-          <div className="relative flex flex-col lg:flex-row p-3 md:p-32 lg:py-48 gap-11 justify-center items-center md:justify-center md:items-center bg-secondary w-[1200px]">
-            <div className="basis-1/3 mt-20 md:mt-0 text-2xl md:text-3xl font-serif">
-              Hey, it's Yash
+          <div
+            className="relative flex flex-col p-3 md:p-11 lg:py-48 gap-11 justify-center items-center md:justify-center md:items-center bg-secondary w-full"
+            ref={subscriptionPlansRef}
+          >
+            <div className="flex flex-col gap-5 justify-center items-center mt-20 lg:mt-9">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-serif text-center">
+                Membership levels
+              </div>
+              <div className="text-lg md:text-xl lg:text-2xl text-center">
+                Choose a plan that's right for you
+              </div>
+              <img src={Vector9} alt="" className="w-3/5 h-12 md:h-16 " />
             </div>
-            <img
-              src={Vector7}
-              alt=""
-              className="-z-2 w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 absolute top-[85%] left-[-15%] md:top-[80%] md:left-[-7%] lg:top-[80%] lg:left-[-13%] rotate-45"
-            />
-            <img
-              src={MePhoto}
-              alt=""
-              className="basis-1/4 w-36 md:w-40 h-auto rounded-md"
-            />
-            <div className="basis-1/2 mb-24 md:mb-0 z-50 text-lg md:text-xl text-center">
-              Your designer and developer with more than five years of
-              experience in making stunning websites. <br />
-              <br /> Helping businesses establish their identity and grow makes
-              me happy and I'm always eager to help in any way I can, so feel
-              free to reach out!
+            <div className="w-full flex flex-col lg:flex-row gap-3">
+              <div className="w-full p-7 md:p-11 bg-primary flex flex-col">
+                <div className="font-serif text-2xl md:text-3xl">Standard</div>
+                <div className="text-lg md:text-xl mt-5">
+                  One request at a time. Pause or cancel anytime.
+                </div>
+                <div className="text-3xl md:text-4xl mt-9 font-bold">
+                  $1,200/m
+                </div>
+                <div className="text-sm md:text-md mt-2 text-lightHighlight">
+                  Pause or cancel anytime
+                </div>
+                <a
+                  href="https://buy.stripe.com/3cs6rg8sX7jX4vK8wx"
+                  className="mt-11 z-20 text-xl md:text-2xl text-white text-center bg-black px-11 md:px-16 py-5 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
+                >
+                  Get started
+                </a>
+                <a
+                  href="https://cal.com/yash-accsuite/15min"
+                  target="_blank"
+                  className="mt-7 text-md md:text-lg text-lightHighlight"
+                >
+                  Book a call
+                </a>
+                <div className="mt-7 border border-lightHighlight w-full opacity-10"></div>
+                <div className="mt-7 text-sm md:text-md font-serif font-bold">
+                  What's included:
+                </div>
+                <ul class="mt-2 space-y-1 text-md lg:text-lg list-disc list-inside">
+                  <li>One request at a time</li>
+                  <li>An average 48 hour delivery</li>
+                  <li>Unlimited requests in the queue</li>
+                  <li>Unlimited revisions</li>
+                  <li>Unlimited team members in workspace</li>
+                  <li>Easy credit card payments</li>
+                </ul>
+              </div>
+              <div className="w-full p-7 md:p-11 bg-primary flex flex-col">
+                <div className="font-serif text-2xl md:text-3xl">Premium</div>
+                <div className="text-lg md:text-xl mt-5">
+                  Two requests at a time. Pause or cancel anytime.
+                </div>
+                <div className="text-3xl md:text-4xl mt-9 font-bold">
+                  $2,200/m
+                </div>
+                <div className="text-sm md:text-md mt-2 text-lightHighlight">
+                  Pause or cancel anytime
+                </div>
+                <a
+                  href="https://buy.stripe.com/3cs6rg8sXfQtd2gfZ0"
+                  className="mt-11 z-20 text-xl md:text-2xl text-white text-center bg-black px-11 md:px-16 py-5 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
+                >
+                  Get started
+                </a>
+                <a
+                  href="https://cal.com/yash-accsuite/15min"
+                  target="_blank"
+                  className="mt-7 text-md md:text-lg text-lightHighlight"
+                >
+                  Book a call
+                </a>
+                <div className="mt-7 border border-lightHighlight w-full opacity-10"></div>
+                <div className="mt-7 text-sm md:text-md font-serif font-bold">
+                  What's included:
+                </div>
+                <ul class="mt-2 space-y-1 text-md lg:text-lg list-disc list-inside">
+                  <li className="font-bold">Two requests at a time</li>
+                  <li>An average 48 hour delivery</li>
+                  <li>Unlimited requests in the queue</li>
+                  <li>Unlimited revisions</li>
+                  <li>Unlimited team members in workspace</li>
+                  <li>Easy credit card payments</li>
+                </ul>
+              </div>
+              <div className="w-full p-7">
+                <div className="font-serif text-lg lg:text-xl">Book a call</div>
+                <div className="mt-3 text-md lg:text-lg">
+                  Find out how Acceleration Suite works and why it's right for
+                  your design needs
+                </div>
+                <a
+                  href="https://cal.com/yash-accsuite/15min"
+                  target="_blank"
+                  className="mb-11 md:mb-5 text-lg mt-5 px-7 py-3 bg-black inline-flex justify-center text-white cursor-pointer"
+                >
+                  Book a call
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div className="md:my-32 my-20 flex flex-col gap-16 p-1">
-          <div className="text-2xl md:text-3xl font-serif text-center leading-relaxed">
-            Get your questions answered and let's work together!
+        <div className="relative md:my-32 my-20 flex flex-col gap-16 p-1">
+          <img
+            src={Vector10}
+            alt=""
+            className="absolute w-1/2 h-14 md:h-24 -rotate-90 top-[-4%] right-[-10%] md:top-[-8%] lg:top-[-8%]"
+          />
+          <img
+            src={Vector13}
+            alt=""
+            className="absolute h-24 md:h-44 lg:h-64 rotate-12 top-[-5%] left-[-4%] md:top-[-8%] lg:top-[-12%]"
+          />
+          <img
+            src={Vector14}
+            alt=""
+            className="absolute w-1/2 h-24 md:h-44 lg:h-64 rotate-12 top-[-5%] right-[-20%] md:top-[-8%] lg:top-[-12%]"
+          />
+          <div className="text-2xl md:text-3xl lg:text-4xl font-serif text-center leading-relaxed">
+            Get your questions answered
           </div>
-          <div className="relative z-20 flex justify-center items-center">
-            <a
-              href="https://cal.com/yash-accsuite/20min"
-              target="_blank"
+          <div className="flex flex-col justify-center items-center">
+            {faqList.map((item, key) => (
+              <Accordion key={key} data={item} />
+            ))}
+          </div>
+          <div className="relative flex flex-col justify-center items-center mt-7 md:m-14 p-3 bg-white ">
+            <img
+              src={Vector12}
+              alt=""
+              className="absolute w-1/2 h-24 md:h-32 top-[-4%] left-[-10%] md:left-[-20%] md:top-[-3%] lg:top-[-5%]"
+            />
+            <div className="text-3xl font-serif text-center px-3 leading-relaxed md:leading-normal md:px-11 mt-7 md:mt-11 pt-5 md:pt-11 pb-5">
+              Design Agency <span className="underline">without</span> the
+              headaches
+            </div>
+            <div className="text-xl text-center mt-3">
+              We replace unreliable freelancers and expensive agencies with{" "}
+              <br /> one flat monthly fee.
+            </div>
+            <div className="flex flex-col md:flex-row w-full pt-5 md:pt-16 md:pl-7 justify-center md:justify-around items-center gap-11">
+              <div className="flex flex-col justify-center md:justify-end items-center md:w-[300px] md:h-[300px] basis-1/2">
+                <img
+                  src={Vector11}
+                  alt=""
+                  className="-z-5  w-[350px] h-[350px] "
+                />
+                <a
+                  href="https://www.figma.com/proto/xh9ExXadd4DUSUgQZFMiQE/recent-work-~?page-id=0%3A1&type=design&node-id=16-689&viewport=524%2C784%2C0.52&t=eeyycJZBQ4x58iXc-1&scaling=min-zoom&starting-point-node-id=16%3A689&mode=design"
+                  target="_blank"
+                  className="z-20 text-xl md:text-2xl text-white bg-black px-11 md:px-16 py-3 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
+                >
+                  View Recent Work
+                </a>
+              </div>
+              <div className="flex flex-col gap-3 basis-1/2 p-5 md:p-11">
+                <div className="text-3xl font-bold">Fully async</div>
+                <div className="text-lg">
+                  We abhor meetings as much as you do. So much so that we work
+                  completely async.
+                </div>
+                <div className="mt-9 text-3xl font-bold">
+                  Manage requests with Trello
+                </div>
+                <div className="text-lg">
+                  Manage your queue of requests, active and completed tasks on a
+                  Trello board private to you.
+                </div>
+                <div className="mt-9 text-3xl font-bold">
+                  Invite unlimited team members
+                </div>
+                <div className="text-lg">
+                  It's easy to invite any number of team members you want in the
+                  Trello workspace.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative z-20 flex flex-col gap-11 justify-center items-center">
+            <div className="text-3xl md:text-3xl leading-relaxed md:leading-normal font-serif text-center pt-3 px-3">
+              See how Acceleration suite is right for you
+            </div>
+            <div className="text-xl md:text-2xl leading-relaxed md:leading-normal text-center pb-3 px-3">
+              Take your team and your business on an easier path to <br />
+              acquiring stunning design work.
+            </div>
+            <div
+              onClick={handleScrollClick}
               className="z-20 text-xl md:text-2xl text-white bg-black px-11 md:px-16 py-3 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
             >
-              Book a free call
-            </a>
+              Get started
+            </div>
             <img
               src={Vector8}
               alt=""
-              className="z-20 absolute w-10 h-10 lg:w-16 lg:h-16 md:w-14 md:h-14 right-[1%] top-[160%] lg:right-[30%] lg:top-[100%] md:right-[15%] md:top-[140%]"
+              className="z-20 absolute w-10 h-10 lg:w-16 lg:h-16 md:w-14 md:h-14 right-[20%] top-[110%] lg:right-[30%] lg:top-[100%] md:right-[25%] md:top-[110%]"
             />
           </div>
         </div>
+
         {/* <div className="w-full border-lightHighlight border my-24 opacity-50"></div> */}
-        <div className="p-7 flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around text-lightHighlight">
+        <div className="p-7 mt-36 flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around text-lightHighlight">
           <div className="text-sm font-serif">Acceleration suite</div>
           <div className="text-sm font-serif text-center">
             Copyright 2023-24. All rights reserved.
