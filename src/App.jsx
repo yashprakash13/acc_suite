@@ -20,9 +20,15 @@ import Vector12 from "./assets/vector12.svg"
 import Vector13 from "./assets/vector13.svg"
 import Vector14 from "./assets/vector14.svg"
 
+import Presentation1 from "./assets/presentation1.svg"
+import Presentation2 from "./assets/presentation2.svg"
+import Presentation3 from "./assets/presentation3.svg"
+import Presentation4 from "./assets/presentation4.svg"
+
 import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 
 import { useRef, useState } from "react"
+
 import Accordion from "./components/Accordion"
 
 function App() {
@@ -68,7 +74,7 @@ function App() {
             Web Design For Influence.
           </div>
           <div className="mt-7 text-xl md:text-2xl text-center">
-            Web design and development subscription for your business.
+            Web design subscriptions to scale your business.
           </div>
           <div
             onClick={handleScrollClick}
@@ -106,7 +112,7 @@ function App() {
           <Vector1 />
           <Vector2 />
         </div>
-        <div className="relative my-11 flex flex-col justify-center items-center bg-secondary h-full px-1 z-50">
+        <div className="relative my-11 flex flex-col justify-center items-center bg-secondary h-fit py-11 px-1 z-50">
           {/* section 2 */}
           <div className="mt-28 text-2xl md:text-4xl font-serif text-center leading-loose md:leading-relaxed">
             Designs that'll make your <br />
@@ -118,8 +124,8 @@ function App() {
             className="mt-3 mb-11 w-24 md:w-36 lg:w-42 -rotate-6"
           />
           <div className="mt-7 text-lg md:text-xl text-center mx-4 md:mx-0">
-            We'll either build you a brand new website or revamp your existing
-            one. <br /> Whatever works for you.{" "}
+            We'll either build you a brand new design for your website or revamp
+            your existing one. <br /> Whatever works for you.{" "}
           </div>
           <div className="mt-20 flex flex-col md:flex-row gap-14 md:gap-10 mb-28 justify-center items-start">
             <div className="z-50 flex flex-col gap-3 justify-center items-center">
@@ -140,14 +146,13 @@ function App() {
               <Code />
               <div className="text-xl text-center">
                 We'll revise your designs until <br />
-                you're satisfied. Optionally, we'll <br /> also develop it for
-                you
+                you're satisfied.
               </div>
             </div>
           </div>
           <img
             src={Vector3}
-            className="-z-50 w-36 h-36 md:w-52 md:h-52 lg:w-64 lg:h-64 absolute bottom-[-5%] left-[65%] md:bottom-[-13%] md:left-[80%] lg:bottom-[-10%] lg:left-[83%] -rotate-45"
+            className="-z-50 w-36 h-36 md:w-52 md:h-52 lg:w-64 lg:h-64 absolute bottom-[-5%] left-[65%] md:bottom-[-13%] md:left-[80%] lg:bottom-[-10%] lg:left-[88%] -rotate-45"
           />
           <img
             src={Vector4}
@@ -166,10 +171,10 @@ function App() {
             fast.
           </div>
           <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:-rotate-3 transition-all">
-            Custom code and no-code development for your website.
+            Custom code and no-code development for your website as an add-on.
           </div>
           <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:rotate-3 transition-all">
-            Analytics to optimize your website for conversions.
+            Integrate analytics to optimize your website for conversions.
           </div>
           <div className="border-4 border-lightHighlight rounded-full px-9 md:px-11 py-3 md:py-7 text-lg md:text-2xl w-96 h-42 text-center inline-flex justify-center items-center shadow-xxl hover:underline hover:-rotate-3 transition-all">
             Optimize your sales funnel so that visitors find your offer
@@ -301,17 +306,17 @@ function App() {
           <img
             src={Vector10}
             alt=""
-            className="absolute w-1/2 h-14 md:h-24 -rotate-90 top-[-4%] right-[-10%] md:top-[-8%] lg:top-[-8%]"
+            className="absolute w-1/2 h-14 md:h-24 -rotate-90 top-[-3%] right-[-10%] md:top-[-5%] lg:top-[-5%]"
           />
           <img
             src={Vector13}
             alt=""
-            className="absolute h-24 md:h-44 lg:h-64 rotate-12 top-[-5%] left-[-4%] md:top-[-8%] lg:top-[-12%]"
+            className="absolute h-24 md:h-44 lg:h-64 rotate-12 top-[-3%] left-[-4%] md:top-[-5%] lg:top-[-6%]"
           />
           <img
             src={Vector14}
             alt=""
-            className="absolute w-1/2 h-24 md:h-44 lg:h-64 rotate-12 top-[-5%] right-[-20%] md:top-[-8%] lg:top-[-12%]"
+            className="absolute w-1/2 h-24 md:h-44 lg:h-64 rotate-12 top-[-3%] right-[-20%] md:top-[-5%] lg:top-[-6%]"
           />
           <div className="text-2xl md:text-3xl lg:text-4xl font-serif text-center leading-relaxed">
             Get your questions answered
@@ -321,11 +326,12 @@ function App() {
               <Accordion key={key} data={item} />
             ))}
           </div>
-          <div className="relative flex flex-col justify-center items-center mt-7 md:m-14 p-3 bg-white ">
+
+          <div className="relative w-full flex flex-col justify-center items-center p-3 mt-7 md:mb-14 bg-white ">
             <img
               src={Vector12}
               alt=""
-              className="absolute w-1/2 h-24 md:h-32 top-[-4%] left-[-10%] md:left-[-20%] md:top-[-3%] lg:top-[-5%]"
+              className="absolute w-1/2 h-24 md:h-32 top-[-1%] left-[-10%] md:left-[-15%] md:top-[-3%] lg:top-[-2%] lg:left-[-20%]"
             />
             <div className="text-3xl font-serif text-center px-3 leading-relaxed md:leading-normal md:px-11 mt-7 md:mt-11 pt-5 md:pt-11 pb-5">
               Design Agency <span className="underline">without</span> the
@@ -335,6 +341,18 @@ function App() {
               We replace unreliable freelancers and expensive agencies with{" "}
               <br /> one flat monthly fee.
             </div>
+            <div className="flex flex-col md:flex-row gap-2 md:gap-4 md:p-3 mt-11 ">
+              <img
+                src={Presentation1}
+                alt=""
+                className="md:w-1/2 w-full h-[700px] basis-1/2 md:basis-1 "
+              />
+              <img
+                src={Presentation4}
+                alt=""
+                className="md:w-1/2 w-full h-[700px] basis-1/2 md:basis-1 "
+              />
+            </div>
             <div className="flex flex-col md:flex-row w-full pt-5 md:pt-16 md:pl-7 justify-center md:justify-around items-center gap-11">
               <div className="flex flex-col justify-center md:justify-end items-center md:w-[300px] md:h-[300px] basis-1/2">
                 <img
@@ -343,7 +361,7 @@ function App() {
                   className="-z-5  w-[350px] h-[350px] "
                 />
                 <a
-                  href="https://www.figma.com/proto/xh9ExXadd4DUSUgQZFMiQE/recent-work-~?page-id=0%3A1&type=design&node-id=16-689&viewport=524%2C784%2C0.52&t=eeyycJZBQ4x58iXc-1&scaling=min-zoom&starting-point-node-id=16%3A689&mode=design"
+                  href="https://www.figma.com/proto/xh9ExXadd4DUSUgQZFMiQE/recent-work-~?page-id=0%3A1&type=design&node-id=16-689&viewport=920%2C321%2C0.22&t=LKalGvwlBc80eqAJ-1&scaling=contain&starting-point-node-id=16%3A689&mode=design"
                   target="_blank"
                   className="z-20 text-xl md:text-2xl text-white bg-black px-11 md:px-16 py-3 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
                 >
@@ -371,6 +389,18 @@ function App() {
                   Trello workspace.
                 </div>
               </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-2 md:gap-4 md:p-3 mt-11 ">
+              <img
+                src={Presentation3}
+                alt=""
+                className="md:w-1/2 w-full h-[700px] basis-1/2 md:basis-1 "
+              />
+              <img
+                src={Presentation2}
+                alt=""
+                className="md:w-1/2 w-full h-[700px] basis-1/2 md:basis-1 "
+              />
             </div>
           </div>
           <div className="relative z-20 flex flex-col gap-11 justify-center items-center">
