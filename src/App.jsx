@@ -39,6 +39,10 @@ function App() {
       a: "Great question! Well, the annual cost hiring a full-time designer exceeds $100,000/year, plus other benefits. Even if you take the plunge and hire one, you may not have enough work to keep them busy at all times. \n However, with the monthly plan, you can pause and resume your subscription whenever you need to ensure you're only paying when you need some design work done.",
     },
     {
+      q: "Why are your prices so low?",
+      a: "We wanted to keep a good balance of profitability for us and affordability for you. This is why we're starting out with an offer that is slightly lower than industry standards.",
+    },
+    {
       q: "How does the pause feature work in the monthly subscription?",
       a: "We understand that you may not have enough design work for the entire month, that's why our billing cycles work on a 30-day basis. So if your work is done and you decide to pause the subscription on the 20th of the month, you will still have 10 days left to request more work whenever you need it in the future.",
     },
