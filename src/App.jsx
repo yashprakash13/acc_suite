@@ -78,7 +78,7 @@ function App() {
             Web Design For Influence.
           </div>
           <div className="mt-7 text-xl md:text-2xl text-center">
-            Web design subscriptions to scale your business.
+            Web design subscriptions for your business.
           </div>
           <div
             onClick={handleScrollClick}
