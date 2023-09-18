@@ -8,8 +8,8 @@ export default {
       lg: "976px",
     },
     colors: {
-      primary: "#FDCABA",
-      secondary: "#FFF7F5",
+      primary: "#ffffff",
+      secondary: "##ef6c6c",
       black: "#000000",
       lightHighlight: "#69595e",
       white: "#ffffff",
@@ -25,7 +25,20 @@ export default {
       xxl: "7px 7px 0px 0px #69595e",
       none: "0px 0px",
     },
-    extend: {},
+    extend: {
+      transitionDelay: {
+        accordShow: "0.5s",
+        accordHide: "0.5s",
+      },
+      transitionProperty: {
+        accordShow: "all",
+        accordHide: "all",
+      },
+      transitionTimingFunction: {
+        accordShow: "cubic-bezier(1, 0, 1, 0)",
+        accordHide: "cubic-bezier(0, 1, 0, 1)",
+      },
+    },
   },
   plugins: [],
 }
