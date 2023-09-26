@@ -29,8 +29,6 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 
 import { useRef, useState } from "react"
 
-import Accordion from "./components/Accordion"
-
 function App() {
   const subscriptionPlansRef = useRef(null)
   const [faqList, setFaqList] = useState([
@@ -55,6 +53,10 @@ function App() {
       a: "No problem! We offer unlimited revisions on the design so that you have exactly what you need at the end.",
     },
     {
+      q: "Do you offer web development services as well?",
+      a: "Custom web development work can be purchased as an add-on after subscribing to a design subscription. Development work will either be done in a no-code tool such as Webflow or Framer or with custom code with frontend frameworks like React.",
+    },
+    {
       q: "How fast will my designs be delivered?",
       a: "The typical turn around time for each request is about 2 days or less, however more complex designs may take more time.",
     },
@@ -63,6 +65,14 @@ function App() {
       a: "Since the nature of the work is high quality, there will be no refunds issued.",
     },
   ])
+
+  const [selected, setSelected] = useState(null)
+  function toggleAccordion(i) {
+    if (selected === i) {
+      return setSelected(null)
+    }
+    setSelected(i)
+  }
 
   function handleScrollClick() {
     subscriptionPlansRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -74,11 +84,11 @@ function App() {
         <div className="relative flex flex-col justify-center items-center">
           {/* section 1 */}
           <Logo classes={"w-40 h-11 md:w-52 md:h-20"} />
-          <div className="mt-24 text-3xl md:text-5xl font-serif text-center md:text-center">
-            Web Design For Influence.
+          <div className="mt-24 text-3xl md:text-5xl font-serif text-center md:text-center leading-relaxed md:leading-loose">
+            Product Design Subscriptions <br /> For Brands.
           </div>
           <div className="mt-7 text-xl md:text-2xl text-center">
-            Web design subscriptions for your business.
+            Stunning designs for the face of your business.
           </div>
           <div
             onClick={handleScrollClick}
@@ -128,8 +138,8 @@ function App() {
             className="mt-3 mb-11 w-24 md:w-36 lg:w-42 -rotate-6"
           />
           <div className="mt-7 text-lg md:text-xl text-center mx-4 md:mx-0">
-            We'll either build you a brand new design for your website or revamp
-            your existing one. <br /> Whatever works for you.{" "}
+            We'll either build you a brand new design for your website and app
+            or revamp your existing one. <br /> Whatever works for you.{" "}
           </div>
           <div className="mt-20 flex flex-col md:flex-row gap-14 md:gap-10 mb-28 justify-center items-start">
             <div className="z-50 flex flex-col gap-3 justify-center items-center">
@@ -244,7 +254,7 @@ function App() {
                   What's included:
                 </div>
                 <ul class="mt-2 space-y-1 text-md lg:text-lg list-disc list-inside">
-                  <li>One request at a time</li>
+                  <li className="font-bold">One request at a time</li>
                   <li>An average 48 hour delivery</li>
                   <li>Unlimited requests in the queue</li>
                   <li>Unlimited revisions</li>
@@ -325,9 +335,26 @@ function App() {
           <div className="text-2xl md:text-3xl lg:text-4xl font-serif text-center leading-relaxed">
             Get your questions answered
           </div>
-          <div className="flex flex-col justify-center items-center">
-            {faqList.map((item, key) => (
-              <Accordion key={key} data={item} />
+          <div className="flex flex-col gap-1 justify-center items-center">
+            {faqList.map((item, i) => (
+              <div className="mb-2 px-5 py-8 w-full border-lightHighlight border-[1px] border-opacity-40">
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => toggleAccordion(i)}
+                >
+                  <div className="font-serif text-lg md:text-xl">{item.q}</div>
+                  <span>{selected === i ? "-" : "+"}</span>
+                </div>
+                <div
+                  className={`text-lg ${
+                    selected === i
+                      ? "h-auto max-h-96 transition-accordShow mt-5"
+                      : "max-h-0 overflow-hidden transition-accordHide"
+                  }`}
+                >
+                  {item.a}
+                </div>
+              </div>
             ))}
           </div>
 

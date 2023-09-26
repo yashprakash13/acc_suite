@@ -1868,7 +1868,7 @@ react-refresh@^0.14.0:
 
 react-scroll-parallax@^3.4.2:
   version "3.4.2"
-  resolved "https://registry.npmjs.org/react-scroll-parallax/-/react-scroll-parallax-3.4.2.tgz"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.4.2.tgz#4f987804581115f3fc50600341611ef5a7ea65d3"
   integrity sha512-jNltdM1a6y2TRHW4X4nyNT9BAzbLoISTvXaoB9YKGudVcAsGWManMI6UZ6PMd2si6bbWtTROgF/A9IoplZ2OLA==
   dependencies:
     parallax-controller "^1.7.0"
