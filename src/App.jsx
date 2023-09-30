@@ -233,7 +233,7 @@ function App() {
                   Pause or cancel anytime
                 </div>
                 <a
-                  href="https://buy.stripe.com/3cs6rg8sX7jX4vK8wx"
+                  href="https://buy.stripe.com/dR6bLA38DfQt8M07sv"
                   className="mt-11 z-20 text-xl md:text-2xl text-white text-center bg-black px-11 md:px-16 py-5 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
                 >
                   Get started
@@ -270,7 +270,7 @@ function App() {
                   Pause or cancel anytime
                 </div>
                 <a
-                  href="https://buy.stripe.com/3cs6rg8sXfQtd2gfZ0"
+                  href="https://buy.stripe.com/9AQ2b038D1ZD7HWfZ2"
                   className="mt-11 z-20 text-xl md:text-2xl text-white text-center bg-black px-11 md:px-16 py-5 md:py-4 shadow-sm md:shadow-lg cursor-pointer hover:-translate-y-2 hover:shadow-xl transition-all"
                 >
                   Get started
