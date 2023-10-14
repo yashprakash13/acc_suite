@@ -8,8 +8,7 @@ export default {
       lg: "976px",
     },
     colors: {
-      primary: "#FDCABA",
-      secondary: "#FFF7F5",
+      primary: "#FDD5D5",
       black: "#000000",
       lightHighlight: "#69595e",
       white: "#ffffff",

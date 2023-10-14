@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cutive&family=K2D:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
 
+body {
+  background: url(./assets/back.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
