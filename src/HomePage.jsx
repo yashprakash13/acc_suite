@@ -11,8 +11,8 @@ const HomePage = () => {
         From Ideas to Interaction
       </div>
       <div className="text-lg md:text-xl lg:tex-2xl font-serif mt-5 lg:mt-5 w-4/5 md:w-3/4 lg:w-1/2 leading-[1.975rem] md:leading-[2.2rem]">
-        We do custom web design and development for founders and creators to
-        build their vision a strong online foundation with acceleration.
+        We do custom web design and development for entrepreneurs to build their
+        vision a strong online foundation with acceleration.
       </div>
       <a
         className="bg-[#fdd5d5] text-lg md:text-xl px-11 pt-2 pb-1 text-black border-[2.5px] mt-9 border-black font-serif inline-flex justify-center items-center gap-2 cursor-pointer hover:bg-[#f6b3b3]"
